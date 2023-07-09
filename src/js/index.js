@@ -64,8 +64,8 @@ personagens.forEach((personagem) => {
     
             mudarImagemDosPersonagensSelecionados(personagem);  
             // Lógica para mover para a esquerda
-    })
-})
+    }
+}
 
 function mudarPesonagemSelecionadoID(personagem) {
     personagem.classList.add('selecionado');
