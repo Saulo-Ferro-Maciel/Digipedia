@@ -22,6 +22,7 @@ personagens.forEach((personagem) => {
 function mudarPesonagemSelecionadoID(personagem) {
     personagem.classList.add('selecionado');
     console.log(`status do ${personagem.id}`, personagem.classList);
+    
 }
 
 function mudarImagemDosPersonagensSelecionados(personagem) {
