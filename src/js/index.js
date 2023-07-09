@@ -5,78 +5,34 @@ personagens.forEach((personagem) => {
         const personagemSelecionado = document.querySelector('.selecionado');
         personagemSelecionado.classList.remove('selecionado');
 
-        if(window.innerWidth < 487){
+        if (window.innerWidth < 487) {
             window.scrollTo({top: 0, behavior: "smooth"});
-        } else if(window.innerWidth < 790){
+        } else if (window.innerWidth < 790) {
             window.scrollTo({top: 0, behavior: "instant"});
-        } else if(window.innerHeight < 699){
+        } else if (window.innerHeight < 699) {
             window.scrollTo({top: 0, behavior: "smooth"});
-        } else if(window.innerWidth < 1024){
+        } else if (window.innerWidth < 1024) {
             window.scrollTo({top: 0, behavior: "instant"});
         }
 
         mudarPesonagemSelecionadoID(personagem);
 
+        mudarImagemDosPersonagensSelecionados(personagem);
+
         mudarDescriçãoDosPersonagens(personagem);
+    })
 
-        mudarImagemDosPersonagensSelecionados(personagem);  
-
-    });
-
-    personagem.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowDown') {
-            const personagemSelecionado = document.querySelector('.selecionado');
-            personagemSelecionado.classList.remove('selecionado');
-    
-            if(window.innerWidth < 487){
-                window.scrollTo({top: 0, behavior: "smooth"});
-            } else if(window.innerWidth < 790){
-                window.scrollTo({top: 0, behavior: "instant"});
-            } else if(window.innerHeight < 699){
-                window.scrollTo({top: 0, behavior: "smooth"});
-            } else if(window.innerWidth < 1024){
-                window.scrollTo({top: 0, behavior: "instant"});
-            }
-    
-            mudarPesonagemSelecionadoID(personagem);
-    
-            mudarDescriçãoDosPersonagens(personagem);
-    
-            mudarImagemDosPersonagensSelecionados(personagem);  
-            // Lógica para mover para baixo
-        } else if (event.key === 'ArrowLeft') {
-                const personagemSelecionado = document.querySelector('.selecionado');
-            personagemSelecionado.classList.remove('selecionado');
-    
-            if(window.innerWidth < 487){
-                window.scrollTo({top: 0, behavior: "smooth"});
-            } else if(window.innerWidth < 790){
-                window.scrollTo({top: 0, behavior: "instant"});
-            } else if(window.innerHeight < 699){
-                window.scrollTo({top: 0, behavior: "smooth"});
-            } else if(window.innerWidth < 1024){
-                window.scrollTo({top: 0, behavior: "instant"});
-            }
-    
-            mudarPesonagemSelecionadoID(personagem);
-    
-            mudarDescriçãoDosPersonagens(personagem);
-    
-            mudarImagemDosPersonagensSelecionados(personagem);  
-            // Lógica para mover para a esquerda
-    }
-}
+})
 
 function mudarPesonagemSelecionadoID(personagem) {
     personagem.classList.add('selecionado');
     console.log(`status do ${personagem.id}`, personagem.classList);
-    
 }
 
 function mudarImagemDosPersonagensSelecionados(personagem) {
     const imagemPersonagemGrande = document.querySelector('.personagem-grandes');
     const idPersonagem = personagem.attributes.id.value;
-    imagemPersonagemGrande.src = `./src/imagens/${idPersonagem}.jpg`;
+    imagemPersonagemGrande.src = `/src/imagens/${idPersonagem}.jpg`;
 }
 
 function mudarDescriçãoDosPersonagens(personagem) {
@@ -96,4 +52,3 @@ function mudarDescriçãoDosPersonagens(personagem) {
     const atributoPersonagem = document.getElementById('atributo');
     atributoPersonagem.innerText = personagem.getAttribute('data-atibuto');
 }
-
