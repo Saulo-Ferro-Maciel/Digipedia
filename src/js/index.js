@@ -6,13 +6,13 @@ personagens.forEach((personagem) => {
         personagemSelecionado.classList.remove('selecionado');
 
         if(window.innerWidth < 487){
-            window.scrollTo({top: 0,behavior: "smooth"});
+            window.scrollTo({top: 0, behavior: "smooth"});
         } else if(window.innerWidth < 790){
-            window.scrollTo({top: 0,behavior: "instant"});
-        } else if(window.innerHeigth < 699){
-            window.scrollTo({top: 0,behavior: "smooth"});
+            window.scrollTo({top: 0, behavior: "instant"});
+        } else if(window.innerHeight < 699){
+            window.scrollTo({top: 0, behavior: "smooth"});
         } else if(window.innerWidth < 1024){
-            window.scrollTo({top: 0,behavior: "instant"});
+            window.scrollTo({top: 0, behavior: "instant"});
         }
 
         mudarPesonagemSelecionadoID(personagem);
@@ -21,8 +21,21 @@ personagens.forEach((personagem) => {
 
         mudarImagemDosPersonagensSelecionados(personagem);  
 
-    })
-})
+    });
+
+    personagem.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowUp') {
+            // Lógica para mover para cima
+        } else if (event.key === 'ArrowDown') {
+            // Lógica para mover para baixo
+        } else if (event.key === 'ArrowLeft') {
+            // Lógica para mover para a esquerda
+        } else if (event.key === 'ArrowRight') {
+            // Lógica para mover para a direita
+        }
+    });
+});
+
 function mudarPesonagemSelecionadoID(personagem) {
     personagem.classList.add('selecionado');
     console.log(`status do ${personagem.id}`, personagem.classList);
