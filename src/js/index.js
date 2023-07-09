@@ -27,7 +27,7 @@ function mudarPesonagemSelecionadoID(personagem) {
 function mudarImagemDosPersonagensSelecionados(personagem) {
     const imagemPersonagemGrande = document.querySelector('.personagem-grandes');
     const idPersonagem = personagem.attributes.id.value;
-    imagemPersonagemGrande.src = `/src/imagens/${idPersonagem}.jpg`;
+    imagemPersonagemGrande.src = `./src/imagens/${idPersonagem}.jpg`;
 }
 
 function mudarDescriçãoDosPersonagens(personagem) {
