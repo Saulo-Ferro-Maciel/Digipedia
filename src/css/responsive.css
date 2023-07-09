@@ -49,10 +49,10 @@
         background-image: url(../imagens/background2.jpg);
         background-repeat: no-repeat;
         background-size:  cover;
-        width: 120%; height: 200%;
+        width: 110%; height: 200%;
         position: absolute;
         z-index: -1;
         background-position: center;
-        opacity: 0.5;
+        opacity: 0.35;
     }
 } 
