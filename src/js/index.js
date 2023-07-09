@@ -20,9 +20,8 @@ personagens.forEach((personagem) => {
         mudarImagemDosPersonagensSelecionados(personagem);
 
         mudarDescriçãoDosPersonagens(personagem);
-    })
-
-})
+    }
+}
 
 function mudarPesonagemSelecionadoID(personagem) {
     personagem.classList.add('selecionado');
