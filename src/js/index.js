@@ -9,7 +9,8 @@ personagens.forEach((personagem) => {
             window.scrollTo({top: 0,behavior: "smooth"});
         } else if(window.innerWidth < 790){
             window.scrollTo({top: 0,behavior: "instant"});
-        }
+        } else if(window.innerHeigth < 690){
+            window.scrollTo({top: 0,behavior: "smooth"});
 
         mudarPesonagemSelecionadoID(personagem);
 
