@@ -57,4 +57,16 @@
         background-position: center;
         opacity: 0.45;
     }
+ @media (max-heigth: 790px) {
+    body::before{
+        content: "" ;
+        background-image: url(../imagens/background2.jpg);
+        background-repeat: no-repeat;
+        background-size:  cover;
+        width: 120%; height: 220%;
+        position: absolute;
+        z-index: -1;
+        background-position: center;
+        opacity: 0.45;
+    }
 } 
